@@ -57,14 +57,86 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
     display: flex;
-    height: 100vh;
 }
+
+ form div:nth-child(n+1) {
+  display: block;
+  float: left;
+  margin-left: 40px;
+ }
+
+.instructions-div {
+  height: 30vh;
+  background:#F9FAFB;
+  margin-top: 20px;
+  padding-left: 40px;
+   box-shadow: -10px 2px 3px 5px #dde0e4;
+}
+
+.instructions-div button {
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+  background-color: #596D48;
+  margin: 10px 0;
+}
+
+.instructions-div p a {
+  text-decoration: none;
+  color: #596D48;
+  font-weight: bold;
+}
+
+ .main div:nth-child(1) p {
+  width: clamp(75%, 80%, 90%);
+ }
+
+
+ legend {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  margin-left: 40px;
+  font-size: 18px;
+  font-weight:bold;
+ }
+
+
+fieldset {
+  border: none;
+}
+
+.main {
+  width: 70vw;
+}
+
+ .main > div:nth-child(2) div {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+ }
+
+ .main div:first-child {
+  padding-left: 40px;
+  padding-top: 15%;
+  background: #F9FAFB;
+  height: 60vh;
+  font-weight: bold;
+ }
+
+
+ .main div:first-child h3 {
+  margin-top: 30px;
+ }
+
+
 /* Styling the aside*/
 .aside {
     background: url(./images/background.jpg);
     background-size:cover;
     background-repeat: no-repeat;
-    width:40vw;
+    width:30vw;
     position: relative;
     height: 100%;
 }
@@ -82,5 +154,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo img {
     max-height: 150px;
+}
+
+.form-row input{
+  border: 1px solid #E5E7EB;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.form-row input:invalid {
+  border: 1px solid red;
+}
+
+.form-row input:focus{
+  outline: none;
+  border: 1px solid blue;
+  box-shadow: 2px 2px 2px 2px #E5E7EB;
 }
 

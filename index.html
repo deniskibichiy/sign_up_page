@@ -12,16 +12,47 @@
             font-weight: bold;
             font-style: normal;
             font-display: swap;
-        } 
+                } 
+                @font-face {                
+                    font-family: 'Montserrat';
+                    src: url('./fonts/montserrat/Montserrat-Regular.woff2') format('woff2');
+                    font-weight: normal;
+                    font-style: normal;
+                    font-display: swap;
+                }
+
+                @font-face {
+                    font-family: 'Montserrat';
+                    src: url('./fonts/montserrat/Montserrat-Italic.woff2') format('woff2');
+                    font-weight: normal;
+                    font-style: italic;
+                    font-display: swap;
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        src: url('./fonts/montserrat/Montserrat-Bold.woff2') format('woff2');
+                        font-weight: bold;
+                        font-style: normal;
+                        font-display: swap;
+                                    }
         .logo p {
                 color: #ffffff;
                 font-family: 'Norse', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-size: 32px;
                 line-height: 3px;
                 display: inline-block;
-                transform: scale(3,4);
+                transform: scale(1.5,3);
                 padding-left: 20px;
-            }      
+            }
+        .main {
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+        }
+
+        form label {
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -36,45 +67,46 @@
       </aside>
       <main class="main">
         <div>
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br> Sign up now to get started.</p>
             <h3>You know you want to</h3>
         </div>
         <div>
-            <h2>Let's do this</h2>
             <form action="" method="post">
-                <div class="form-row">
-                    <label for="first-name">FIRST NAME:</label>
-                    <input type="text" name="first-name" id="first-name">
-                </div>
-                <div class="form-row">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last-name">
-                </div>
-                <div class="form-row">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="form-row">
-                    <label for="phone-number">PHONE NUMBER</label>
-                    <input type="tel" id="phone-number" name="phone-number">
-                </div>
-                <div class="form-row">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password">
-                </div>
-                <div class="form-row">
-                    <label for="password-confirm">CONFIRM PASSWORD</label>
-                    <input type="password" name="password-confirm" name="password-confirm" id="password">
-                </div>
-                <div>
-                    <button type="submit" class="btn">Submit</button>
-                </div>
-                <div>
+                <fieldset>
+                    <legend>Let's do this</legend>
+                    <div class="form-row">
+                        <label for="first-name">FIRST NAME:</label>
+                        <input type="text" name="first-name" id="first-name">
+                    </div>
+                    <div class="form-row">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-row">
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="tel" id="phone-number"
+                        required
+                        name="phone-number">
+                    </div>
+                    <div class="form-row">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="form-row">
+                        <label for="password-confirm">CONFIRM PASSWORD</label>
+                        <input type="password" name="password-confirm" name="password-confirm" id="password">
+                    </div>
+                </fieldset>
+                <section class="instructions-div">
+                    <button type="submit" class="btn">Create Account</button>
                     <p class="instructions">Already have and account? <span><a href="#">Log in</a></span></p>
-                </div>
+                </section>
             </form>
         </div>
-        <div></div>
       </main>
   </div>
 </body>
